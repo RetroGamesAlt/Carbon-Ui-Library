@@ -10,6 +10,9 @@ function UILibrary:CreateWindow(windowText)
     mainFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     mainFrame.Parent = screenGui
 
+local Ui = Instance.new("UICorner", mainFrame)    
+Ui.CornerRadius = UDim2.new(0,10)
+
     local topTextLabel = Instance.new("TextLabel")
     topTextLabel.Size = UDim2.new(1, 0, 0, 30)
     topTextLabel.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
@@ -20,7 +23,7 @@ function UILibrary:CreateWindow(windowText)
     local scrollFrame = Instance.new("ScrollingFrame")
     scrollFrame.Size = UDim2.new(1, 0, 1, -30) -- Set height to be same as mainFrame minus 30
     scrollFrame.Position = UDim2.new(0, 0, 0, 30) -- Position below the topTextLabel
-    scrollFrame.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+    scrollFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     scrollFrame.BorderSizePixel = 0
     scrollFrame.ScrollBarThickness = 10
     scrollFrame.Parent = mainFrame
@@ -28,6 +31,9 @@ function UILibrary:CreateWindow(windowText)
     self.scrollFrame = scrollFrame
     self.elementYPosition = 0
 end
+
+local Ui2 = Instance.new("UICorner", mainFrame)    
+Ui2.CornerRadius = UDim2.new(0,10)
 
 function UILibrary:AddTextLabel(text)
     local textLabel = Instance.new("TextLabel")
@@ -40,6 +46,9 @@ function UILibrary:AddTextLabel(text)
 
     self.elementYPosition = self.elementYPosition + 30
 end
+
+local Ui3 = Instance.new("UICorner", mainFrame)    
+Ui3.CornerRadius = UDim2.new(0,10)
 
 function UILibrary:AddButton(text, callback)
     local button = Instance.new("TextButton")
@@ -55,6 +64,9 @@ function UILibrary:AddButton(text, callback)
     self.elementYPosition = self.elementYPosition + 30
 end
 
+local Ui4 = Instance.new("UICorner", mainFrame)    
+Ui4.CornerRadius = UDim2.new(0,10)
+
 function UILibrary:AddTextBox(placeholderText)
     local textBox = Instance.new("TextBox")
     textBox.Size = UDim2.new(1, 0, 0, 30)
@@ -68,5 +80,8 @@ function UILibrary:AddTextBox(placeholderText)
 
     return textBox
 end
+
+local Ui5 = Instance.new("UICorner", mainFrame)    
+Ui5.CornerRadius = UDim2.new(0,10)
 
 return UILibrary
