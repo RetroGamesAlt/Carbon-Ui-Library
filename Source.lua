@@ -11,7 +11,7 @@ function UILibrary:CreateWindow(windowText)
     mainFrame.Parent = screenGui
 
     local Ui = Instance.new("UICorner", mainFrame)    
-    Ui.CornerRadius = UDim2.new(0,10)
+    Ui.CornerRadius = UDim2.new(0,20)
 
     local topTextLabel = Instance.new("TextLabel")
     topTextLabel.Size = UDim2.new(1, 0, 0, 30)
@@ -28,9 +28,6 @@ function UILibrary:CreateWindow(windowText)
     scrollFrame.ScrollBarThickness = 10
     scrollFrame.Parent = mainFrame
 
-    local Ui2 = Instance.new("UICorner", scrollFrame)    
-    Ui2.CornerRadius = UDim2.new(0,10)
-
     self.scrollFrame = scrollFrame
     self.elementYPosition = 0
 end
@@ -44,9 +41,6 @@ function UILibrary:AddTextLabel(text)
     textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
     textLabel.Parent = self.scrollFrame
 
-    local Ui3 = Instance.new("UICorner", textLabel)    
-    Ui3.CornerRadius = UDim2.new(0,50)
-
     self.elementYPosition = self.elementYPosition + 30
 end
 
@@ -59,8 +53,9 @@ function UILibrary:AddButton(text, callback)
     button.TextColor3 = Color3.fromRGB(255, 255, 255)
     button.Parent = self.scrollFrame
 
-    local Ui4 = Instance.new("UICorner", button)    
-    Ui4.CornerRadius = UDim2.new(0,50)
+    local buttonCorner = Instance.new("UICorner", button)
+
+    buttonCorner.CornerRadius = UDim.new(0, 50)
 
     button.MouseButton1Click:Connect(callback)
 
@@ -76,8 +71,8 @@ function UILibrary:AddTextBox(placeholderText)
     textBox.TextColor3 = Color3.fromRGB(255, 255, 255)
     textBox.Parent = self.scrollFrame
 
-    local Ui5 = Instance.new("UICorner", textBox)    
-    Ui5.CornerRadius = UDim2.new(0,50)
+      local textBoxCorner = Instance.new("UICorner", textBox)
+    textBoxCorner.CornerRadius = UDim.new(0, 50)
 
     self.elementYPosition = self.elementYPosition + 30
 
