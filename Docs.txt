@@ -1,0 +1,21 @@
+-- make the ui library
+local UILibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/RetroGamesAlt/Carbon-Ui-Library/main/Source.lua"))()
+
+-- Window Text or title
+UILibrary:CreateWindow("Text here")
+
+UILibrary:AddTextLabel("TextLabel 1")
+UILibrary:AddTextLabel("TextLabel 2")
+
+-- Add a button
+UILibrary:AddButton("Button", function()
+    print("Button clicked")
+end)
+
+-- Add a textbox
+local textBox = UILibrary:AddTextBox("Enter text here")
+
+-- Handle text box focus lost
+textBox.FocusLost:Connect(function()
+    print("TextBox content:", textBox.Text)
+end)
