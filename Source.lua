@@ -32,7 +32,7 @@ Ui.CornerRadius = UDim2.new(0,10)
     self.elementYPosition = 0
 end
 
-local Ui2 = Instance.new("UICorner", mainFrame)    
+local Ui2 = Instance.new("UICorner", scrollFrame)    
 Ui2.CornerRadius = UDim2.new(0,10)
 
 function UILibrary:AddTextLabel(text)
@@ -47,8 +47,8 @@ function UILibrary:AddTextLabel(text)
     self.elementYPosition = self.elementYPosition + 30
 end
 
-local Ui3 = Instance.new("UICorner", mainFrame)    
-Ui3.CornerRadius = UDim2.new(0,10)
+local Ui3 = Instance.new("UICorner", textLabel)    
+Ui3.CornerRadius = UDim2.new(0,50)
 
 function UILibrary:AddButton(text, callback)
     local button = Instance.new("TextButton")
@@ -64,8 +64,8 @@ function UILibrary:AddButton(text, callback)
     self.elementYPosition = self.elementYPosition + 30
 end
 
-local Ui4 = Instance.new("UICorner", mainFrame)    
-Ui4.CornerRadius = UDim2.new(0,10)
+local Ui4 = Instance.new("UICorner", button)    
+Ui4.CornerRadius = UDim2.new(0,50)
 
 function UILibrary:AddTextBox(placeholderText)
     local textBox = Instance.new("TextBox")
@@ -81,7 +81,7 @@ function UILibrary:AddTextBox(placeholderText)
     return textBox
 end
 
-local Ui5 = Instance.new("UICorner", mainFrame)    
-Ui5.CornerRadius = UDim2.new(0,10)
+local Ui5 = Instance.new("UICorner", textBox)    
+Ui5.CornerRadius = UDim2.new(0,50)
 
 return UILibrary
