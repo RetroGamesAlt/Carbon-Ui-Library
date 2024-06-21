@@ -6,7 +6,7 @@ function UILibrary:CreateWindow(windowText)
 
     local mainFrame = Instance.new("Frame")
     mainFrame.Size = UDim2.new(0, 400, 0, 300)
-    mainFrame.Position = UDim2.new(0.5, -150, 0.5, -100)
+    mainFrame.Position = UDim2.new(0.5, -200, 0.5, -150)
     mainFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     mainFrame.Parent = screenGui
 
@@ -18,8 +18,8 @@ function UILibrary:CreateWindow(windowText)
     topTextLabel.Parent = mainFrame
 
     local scrollFrame = Instance.new("ScrollingFrame")
-    scrollFrame.Size = UDim2.new(0, 400, 1, 270)
-    scrollFrame.Position = UDim2.new(0, 0, 0, 30)
+    scrollFrame.Size = UDim2.new(1, 0, 1, -30) -- Set height to be same as mainFrame minus 30
+    scrollFrame.Position = UDim2.new(0, 0, 0, 30) -- Position below the topTextLabel
     scrollFrame.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
     scrollFrame.BorderSizePixel = 0
     scrollFrame.ScrollBarThickness = 10
